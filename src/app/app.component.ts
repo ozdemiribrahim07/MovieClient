@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'MovieClient';
+  navbar : any;
+  @HostListener('document:scroll') onScroll() {
+   if(document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+    this.navbar = {
+      'background-color' : '#000000',
+    }
+  }
+  else {
+    this.navbar = {}
+  }
+}
+
 }

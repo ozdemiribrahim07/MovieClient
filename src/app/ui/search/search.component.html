@@ -1,0 +1,13 @@
+<div class="content p-5">
+    <form  [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="mb-3 col-lg-10">
+                <input type="text" class="form-control" formControlName="searchText" placeholder="bir film arayın.." >
+              </div>
+
+              <div class="mb-3 col-lg-2">
+              <button class="search-button">Ara</button>
+              </div>
+        </div>
+    </form>
+</div>
