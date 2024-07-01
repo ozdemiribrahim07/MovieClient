@@ -30,7 +30,10 @@
         <div class="miniposter">
           <ng-container  *ngFor="let item of trendingMoviesResult">
             <img src="https://image.tmdb.org/t/p/original/{{item.poster_path}}"
-            class="poster-images" alt="...">
+            class="poster-images" alt="..."
+            [routerLink] = "['movie',item.id]"
+            >
+           
           </ng-container>
         </div>
     

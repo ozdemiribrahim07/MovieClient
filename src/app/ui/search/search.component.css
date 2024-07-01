@@ -12,6 +12,10 @@
     transition: transform 450ms ; 
 }
 
+img{
+    width: 100%;
+}
+
 .search-button:hover{
     background-color: white;
     color: black;

@@ -16,7 +16,7 @@ export class MovieApiService {
     return this.httpClient.get(`${this.baseUrl}/trending/all/week?language=tr-TR&api_key=${this.apikey}`)
   }
 
-  searchMovie(data :any){
+  searchMovie(data :any) : Observable<any>{
     return this.httpClient.get(`${this.baseUrl}/search/movie?api_key=${this.apikey}&query=${data.searchText}`)
   }
 
@@ -24,4 +24,12 @@ export class MovieApiService {
     return this.httpClient.get(`${this.baseUrl}/trending/movie/day?api_key=${this.apikey}`)
   }
 
+  getSelectedMovie(data :any) : Observable<any>{
+   return this.httpClient.get(`${this.baseUrl}/movie/${data}?api_key=${this.apikey}`)
+  }
+
+  getSelectedMovieCast(data :any) : Observable<any>{
+    return this.httpClient.get(`${this.baseUrl}/movie/${data}/credits?api_key=${this.apikey}`)
+  }
+  
 }

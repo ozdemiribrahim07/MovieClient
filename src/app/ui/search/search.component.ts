@@ -14,6 +14,7 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  searchResult : any;
   searchForm = new FormGroup({
     'searchText' : new FormControl(null)
   });
@@ -21,7 +22,7 @@ export class SearchComponent implements OnInit {
   onSubmit(){
     console.log(this.searchForm.value);
     this.movieApiService.searchMovie(this.searchForm.value).subscribe((result)=>{
-      console.log(result);
+      this.searchResult = result.results;
     })
   }
 

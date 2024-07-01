@@ -1,1 +1,36 @@
-<p>movie-details works!</p>
+ <div class="container mt-4">
+    <div class="row p-5">
+        <div class="col-lg-2">
+            <img src="https://image.tmdb.org/t/p/original/{{movies.poster_path}}" alt="">
+        </div>
+
+        <div class="col-lg-10 mt-5">
+            <h1 class="mt-4" style="color: white;">{{movies.original_title}}</h1>
+            <p style="color: white;">{{movies.overview}}</p>
+
+            <div class="mt-4 p-4">
+                <h2 style="color: white;">Oyuncular</h2>
+                <div class="row">
+                <div class="col-lg-4" *ngFor="let item of cast">
+
+                    <div>
+                    </div>
+                        <div class="col-lg-2">
+                            <img class="cast" src="https://image.tmdb.org/t/p/original/{{item.profile_path}}" alt="">
+                        </div>
+                        <div class="col-lg-10">
+                            <p style="color: white;">{{item.name}}</p>
+                            <p style="color: white;">{{item.character}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    
+
+ </div>

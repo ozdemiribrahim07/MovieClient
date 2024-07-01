@@ -10,4 +10,27 @@
               </div>
         </div>
     </form>
+
+
+    <div class="row mt-5">
+        <div class="col-lg-4" *ngFor="let item of searchResult">
+            <div class="col-lg-3  mt-5">
+                <img src="https://image.tmdb.org/t/p/original/{{item.poster_path}}" alt="">
+                
+            </div>
+           
+            <div class="col-lg-9">
+                <h5 style="color: white;">{{item.original_title}}</h5>
+            </div>
+            
+        </div>
+
+    </div>
+
+
+
+
+
+
+
 </div>
